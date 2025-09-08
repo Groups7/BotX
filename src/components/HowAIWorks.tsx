@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Monitor, TrendingUp, BarChart3, Bot, Zap, LineChart } from 'lucide-react';
+import { User, Monitor, TrendingUp, BarChart3, Bot, Zap, LineChart,DollarSign } from 'lucide-react';
 
 const HowAIWorks = () => {
   return (
@@ -59,7 +59,40 @@ const HowAIWorks = () => {
               YOUR ROLE
             </h3>
           </div>
+          {/* step 2: broker */}
+           <div className="flex flex-col items-center space-y-8 group">
+             <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-6 py-3 text-green-400 mb-8 hover:border-green-400/40 transition-all duration-300">
+            <Bot className="w-5 h-5 animate-pulse" />
+            <span className="text-sm font-medium">Instant Orders</span>
+          </div>
+            <div className="relative">
+              <div className="w-40 h-40 md:w-48 md:h-48 border-4 border-white rounded-2xl flex items-center justify-center bg-black hover:scale-110 transition-all duration-500 group-hover:border-gray-300 relative overflow-hidden">
+                <div className="flex flex-col items-center space-y-3 group-hover:scale-110 transition-transform duration-300">
+                  {/* Monitor Design */}
+                  <div className="w-20 h-14 md:w-24 md:h-16 border-3 border-white rounded-lg bg-black flex items-center justify-center relative">
+                    <TrendingUp className="w-10 h-8 md:w-12 md:h-10 text-white" />
+                    
+                    {/* Screen Glow */}
+                    <div className="absolute inset-1 bg-gradient-to-t from-green-400/20 to-transparent rounded"></div>
+                  </div>
+                  
+                  {/* Monitor Stand */}
+                  <div className="w-8 h-3 bg-white rounded-full"></div>
+                  <div className="w-12 h-2 bg-white rounded-full"></div>
+                </div>
 
+                {/* Trading Signals */}
+                <div className="absolute top-4 left-4 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute bottom-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                <div className="absolute bottom-4 right-4 w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
+              </div>
+            </div>
+            
+            <h3 className="text-2xl md:text-4xl font-bold text-white mb-6 tracking-wider group-hover:text-gray-300 transition-colors">
+              YOUR BROKER
+            </h3>
+          </div>
           {/* Step 2: AI Trading Bot - Highlighted */}
           <div className="flex flex-col items-center space-y-8 group">
              <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-6 py-3 text-green-400 mb-8 hover:border-green-400/40 transition-all duration-300">
@@ -113,18 +146,18 @@ const HowAIWorks = () => {
               AI TRADING BOT
             </h3>
           </div>
-          {/* Step 3: Your Broker */}
+          {/* Step 3: Your Profits */}
           <div className="flex flex-col items-center space-y-8 group">
              <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-6 py-3 text-green-400 mb-8 hover:border-green-400/40 transition-all duration-300">
             <Bot className="w-5 h-5 animate-pulse" />
-            <span className="text-sm font-medium">Instant Orders</span>
+            <span className="text-sm font-medium">Profits</span>
           </div>
             <div className="relative">
               <div className="w-40 h-40 md:w-48 md:h-48 border-4 border-white rounded-2xl flex items-center justify-center bg-black hover:scale-110 transition-all duration-500 group-hover:border-gray-300 relative overflow-hidden">
                 <div className="flex flex-col items-center space-y-3 group-hover:scale-110 transition-transform duration-300">
                   {/* Monitor Design */}
                   <div className="w-20 h-14 md:w-24 md:h-16 border-3 border-white rounded-lg bg-black flex items-center justify-center relative">
-                    <TrendingUp className="w-10 h-8 md:w-12 md:h-10 text-white" />
+                    <DollarSign className="w-10 h-8 md:w-12 md:h-10 text-white" />
                     
                     {/* Screen Glow */}
                     <div className="absolute inset-1 bg-gradient-to-t from-green-400/20 to-transparent rounded"></div>
@@ -144,7 +177,7 @@ const HowAIWorks = () => {
             </div>
             
             <h3 className="text-2xl md:text-4xl font-bold text-white mb-6 tracking-wider group-hover:text-gray-300 transition-colors">
-              YOUR BROKER
+              YOUR PROFITS
             </h3>
           </div>
         </div>
